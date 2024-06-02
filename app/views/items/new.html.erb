@@ -1,3 +1,8 @@
-<h1>New Item</h1>
+<div class="flex-1">
+  <%= render "application/navbar"%>
+<div>
 
-<%= render "form", item: @item %>
+<article class="format lg:format-lg mt-5 px-5">
+    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">New Item</h2>
+    <%= render "form", item: @item %>
+</article>

@@ -21,4 +21,5 @@ module.exports = {
     require("@tailwindcss/container-queries"),
     require("flowbite/plugin"),
   ],
+  darkMode: "media",
 };
