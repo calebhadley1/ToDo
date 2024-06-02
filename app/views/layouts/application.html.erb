@@ -13,6 +13,9 @@
 
   <body>
     <main class="container flex max-w-full h-screen dark:bg-gray-900">
+      <%# Todo improve error message styling%>
+      <p class="notice mb-2 text-lg font-semibold text-gray-900 dark:text-white"><%= notice %></p>
+      <p class="alert mb-2 text-lg font-semibold text-gray-900 dark:text-white"><%= alert %></p>
       <%= yield %>
     </main>
   </body>

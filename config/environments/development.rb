@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # For tailwind css
   config.assets.debug = true
+
+  # For devise auth
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
