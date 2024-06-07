@@ -12,10 +12,20 @@
   </head>
 
   <body>
-    <main class="container flex max-w-full h-screen dark:bg-gray-900">
+    <main class="container max-w-full h-screen dark:bg-gray-900">
       <%# Todo improve error message styling%>
-      <p class="notice mb-2 text-lg font-semibold text-gray-900 dark:text-white"><%= notice %></p>
-      <p class="alert mb-2 text-lg font-semibold text-gray-900 dark:text-white"><%= alert %></p>
+      <div class="grid grid-cols-1">
+        <%- if notice.present? %>
+          <div class="text-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+            <%= notice %>
+          </div>
+        <% end %>
+        <%- if alert.present? %>
+          <div class="text-center alert p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <%= alert %>
+          </div>
+        <% end %>
+      </div>
       <%= yield %>
     </main>
   </body>
